@@ -1,0 +1,128 @@
+/*
+Programming from A-Z Portfolio Website
+10 Sep 2021 - Continue
+Soojin Lee
+Professor Daniel Shifffman */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Pen Script', cursive;
+  }
+
+/*container 1*/
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+
+#container1 {
+  z-index: 100;
+  width: 100%;
+  height: 65pt;
+  padding-bottom: 15pt;
+  position: fixed;
+
+}
+
+#container1 img {
+  position: relative;
+  max-width: 100%;
+  width: 120pt;
+  left: 5%;
+  top: 30px;
+}
+
+.navbar {
+  z-index: 100;
+  overflow: hidden;
+  position: fixed;
+  top: 40px; 
+  right: 50px;
+  width: auto; 
+  border-radius: 25px;
+}
+
+.navbar a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 0px 40px;
+  text-decoration: none;
+  font-size: 17pt;
+}
+
+.navbar a:hover {
+  color: #572D15;
+
+}
+
+/*container 2*/
+
+#container2 {
+  z-index: -1;
+  width: 100%;
+  height: 80pt;
+  display: flex;
+  position: relative;
+  padding-top: 80pt;
+  justify-content: center;
+  font-family: 'Amatic SC', cursive;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+#container2 .title {
+  position: relative;
+  font-style: bold;
+  font-size: 40pt;
+}
+
+#container2 .title_info {
+  position: relative;
+  padding-top: 80pt;
+  font-size: 20pt;
+}
+
+/*container 3*/
+
+#container3 {
+  width: 100%;
+  height: 100pt;
+  display: flex;
+  padding-top: 80pt;
+  margin-top: 1000pt;
+  background-color: pink;
+  justify-content: center;
+  font-family:'Nanum Pen Script', cursive;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+#container3 .title {
+  position: relative;
+  font-size: 20pt;
+  
+}
+
+
+
