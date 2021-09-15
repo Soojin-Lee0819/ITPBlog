@@ -22,23 +22,13 @@ body{
 
 /*container 1*/
 
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-
-
 #container1 {
-  z-index: 100;
   width: 100%;
   height: 65pt;
   padding-bottom: 15pt;
+  background-color: white;
   position: fixed;
+  z-index: 100;
 
 }
 
@@ -51,13 +41,13 @@ header {
 }
 
 .navbar {
-  z-index: 100;
   overflow: hidden;
   position: fixed;
   top: 40px; 
   right: 50px;
   width: auto; 
   border-radius: 25px;
+  z-index: 5;
 }
 
 .navbar a {
@@ -77,28 +67,25 @@ header {
 /*container 2*/
 
 #container2 {
-  z-index: -1;
   width: 100%;
-  height: 80pt;
-  display: flex;
-  position: relative;
-  padding-top: 80pt;
-  justify-content: center;
+  height: 120pt;
+  margin-top: 80pt;
+  padding-bottom: 15pt;
   font-family: 'Amatic SC', cursive;
-  max-width: 100%;
-  max-height: 100%;
-
+  background-color: white;
+  text-align: center;
+  position: fixed;
+  z-index: 100;
 }
+
 
 #container2 .title {
-  position: relative;
-  font-style: bold;
-  font-size: 40pt;
+  font-size: 30pt;
 }
 
-#container2 .title_info {
-  position: relative;
-  padding-top: 80pt;
+#container2 .title_info{
+  margin-top: -10pt;
+  font-weight: normal;
   font-size: 20pt;
 }
 
@@ -106,23 +93,48 @@ header {
 
 #container3 {
   width: 100%;
-  height: 100pt;
+  height: 1000pt;
+  padding-top: 220pt;
+  text-align: center;
   display: flex;
-  padding-top: 80pt;
-  margin-top: 1000pt;
-  background-color: pink;
-  justify-content: center;
-  font-family:'Nanum Pen Script', cursive;
-  max-width: 100%;
-  max-height: 100%;
-
-}
-
-#container3 .title {
   position: relative;
-  font-size: 20pt;
-  
+  font-family: 'Inconsolata', monospace;
+}
+
+#container3 .weektitle {
+   margin-left: 30%;  
+   font-size: 15pt;
+ 
+}
+
+#container3 .weektitle a {
+  line-height: 5em;
+  border-radius: 7px;
+  content: "\a";
+  padding: 9px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15pt;
 }
 
 
+#container3 .weektitle a:hover {
+  border-style: solid;
+  border-width: 1pt;
+  padding: 8px;
 
+}
+
+#container3 #weekdate {
+  color: #A9A9A9;
+  margin-top: -9pt;
+  margin-left: 8%;
+  line-height: 32px;
+  font-size: 13pt;
+}
+
+
+#container3 #weekdate p{
+   line-height: 5em;
+}
