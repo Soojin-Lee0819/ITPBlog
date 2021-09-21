@@ -11,8 +11,6 @@ Soojin Lee
 
   <title> Regular Expressions </title>
   <link rel="stylesheet" href="week1style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <!-- Top Navigation-->
@@ -37,3 +35,304 @@ Soojin Lee
 	</div>
 
 <!-- Project Title Container 2-->
+
+<div id= "container2"> 
+
+ 		<div class="title">
+
+		<p> Regular Expressions </p>
+
+		</div>
+
+		<div class ="project-description">
+
+		<p> Author: Soojin Lee  &nbsp;&nbsp;&nbsp;     Date: 20, Sep, 2021 </p> 
+
+		</div>  
+
+
+		<h1>
+		| What is Regular Expressions?
+		</h1>
+
+		<div class="text">
+
+			A regular expression (referred to as "regex" for short) is a sequence of characters that describes or matches a given amount of text. It is mainly used for pattern matching with strings, or string matching, i.e. "find and replace" - like operations. 
+		</div>
+
+		<h1>
+
+			| Regex Golf 
+
+		</h1>
+
+		<div class="text">
+			To practice and exercise around regular expressions, I have played Regex Golf online game. <br> In this game you are given two sets of text fragents, and you need to try to write the shortest possible regular expression which would match all elements of one set, while at the same time not matching any element from the other set. 
+
+			<br><br>
+
+			Click <a href="https://alf.nu/RegexGolf">here</a> to play the game.
+		</div>
+	
+				<h2 id="example1"> Example 1 </h2>
+
+
+			  	<img src="week2image/golf1.jpg">
+
+			<div class="text">
+
+			The pattern that I have noticed for the Green Column is that the beginning letter matches with the ending letter. For example the word "civic" starts with the letter "c" and ends with the letter "c".
+
+			<br><br>
+
+			To express this in regex language, I had to capture the start letter of the string, followed by allowing any number of alphabets, and end with the beginning letter of the string that I have captured earlier.
+
+			</div>
+
+			<h3> In Regular Expression </h3>
+			<div class="text">
+
+			 ^(.).*\1$ 
+
+			</div>
+
+			<h3> Break Down</h3>
+
+			<div class="text">
+
+		 <span style="color:blue"> ^(.) </span> capture the start letter of the string. <br>
+			<span style="color:blue">.* </span>The preceding of any character for zero or more times	<br> <span style="color:blue">\1$ </span> End with the 1st capturing group. 
+
+		</div>
+		<h3> Regex Reference</h3>
+
+
+		<div class="text">
+
+			<ul class="a">
+  		<li>	<span style="color:blue">^</span>| Start of string or start of line </li>
+  		<li>  <span style="color:blue">^</span> | When [^ inside brackets], it means "not" </li>
+			<li><span style="color:blue">()</span> | Capturing Group </li>
+			<li> <span style="color:blue">.</span> | Any characgter except line breaks </li>
+			<li> <span style="color:blue">*</span> | Matches preceding match zero or more times</li>
+  		<li> <span style="color:blue">\1 </span>| The 1st Capturing Group </li>
+  		<li> <span style="color:blue">$</span> | End of string or end of line </li>
+
+  	</div>
+
+  <h3> Challenge</h3>
+
+	<img src="week2image/golf2.jpg">
+
+			<div class="text"> With this expression, there was an error snice one word "spornou" from tha section where the word shouldn't match the pattern begins and ends with the same letter "s". Therefore, another pattern that satisfies all the left column, but not the red column had to be found. None of the letter on the left column that is not the beginning or the end has the letter "p" in it Therefore the expression <span style="color:blue"> [^p] </span> (letter that is not p) was added to make this final regex: <span style="color:blue"> ^(.)[^p].*\1$ </span> </div>
+
+	<h3> Solution </h3>
+	<img src="week2image/golf3.jpg">
+
+
+
+					<h2> Example 2 </h2>
+
+
+			  	<img src="week2image/golf4.jpg">
+
+
+
+		  <h3> The Pattern</h3>
+
+		  <div class="text">
+
+
+			The pattern I found for this example is that for the words on the left column, the same letters are repeating at least three times with a random word in between. For example, for the word "Makaraka", the letter "a" is repeating three times. M <span style="color:blue">a</span> k <span style="color:blue">a</span> r <span style="color:blue">a</span> ka. <br>
+
+			To write this, the regex should be representing such pattern <br>
+
+			&emsp; 1) a random letter <br>
+			&emsp; 2) a repeating letter <br>
+			&emsp; 3) step 1 & step 2 is repeated 3 times consequtively <br>
+
+
+
+			</div>
+
+			 <h3> Solution! </h3>
+
+			 <div class="text">
+
+			 	<span style="color:blue"> 	(.)(.\1){3} </span>
+
+			 </div>
+
+			 <h3> Break Down</h3>
+
+			 	 <div class="text">
+
+		 	<span style="color:blue"> 	(.) </span> capture any alphabet (1st capturing group) <br>
+			<span style="color:blue">(.\1) </span>any alphabet followed by 1st capturing group(2nd capturing group)<br> <span style="color:blue">{3} </span> repeat the 2nd capturing group for 3 times. 
+
+				</div>
+
+				  	<img src="week2image/golf5.jpg">
+
+		<h1>
+
+			| Regular Expression Crossword
+
+		</h1>
+
+		<div class="text">
+
+			Another game to exercise regex is Regular Expression Crossword. It is a game similar to sudoku or the traditional crossword puzzle, where you guess the correct letters in horizontal and vertical lines of a grid. 
+
+				<br> 
+
+				Click <a href="https://regexcrossword.com/challenges/beginner/puzzles/1">here</a> to play the game.
+
+			</div>
+
+						<h2> Example 1</h2>
+					<img src="week2image/cross1.jpg">
+		<h3> Regex Reference</h3>
+
+			<div class="text">
+					<ul class="a">
+  		<li>	<span style="color:blue">| </span> | Alteration/OR operand </li>
+
+  		</ul>
+  	</div>
+
+							<h2> Example 2</h2>
+					<img src="week2image/cross2.jpg">
+	<h3> Regex Reference</h3>
+			<div class="text">
+			<ul class="a">
+  		<li>	<span style="color:blue">[x-y] </span>| one of the characters in the range from x to y </li>
+  		<li>  <span style="color:blue">[^x-y] </span>| one of the characters not in the range from x to y</li>
+			</ul>
+		</div>
+
+			<br><br>
+
+
+		<h1>
+
+			| Regex Syntax Resource
+
+		</h1>
+
+		  <div class="text">
+
+		  	Here are some of the useful resources to learn regex syntax. <br>
+
+				<a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html" > page link </a>
+		  </div>
+		   
+		
+		<h1>
+
+			| Regex Experiment in Sublime Text
+
+		</h1>
+
+		  <div class="text">
+
+		  	After learning regular expression syntax, and practicing it with online games, I have experimented with using Regular Expressions in a text editor Sublime text. <br><br>
+
+			I wanted to find a text that will give me a variety of text that has a variety of number, characters, and punctuations to expriment with. Recently my friends asked me if I have tried buying grocery at Whole Foods and asked if it is worth getting organic food from there. Inspired from this conversation, I found a Trader Joe's vs. Whole Foods Price comprison article <a href="https://koopy.com/blog/trader-joes-vs-whole-foods-price-comparison/" > Here </a> that analyzes which grocery store is better, to experiment regular expression. 
+		 		  </div>
+		 		  <img src="week2image/exercise2.jpg">
+
+		 	  <div class="text">
+
+		 	  	I have copied the text from this article to Sublime text. <br>
+
+		 	  </div>
+
+		 	    <img src="week2image/exercise3.jpg">
+
+
+
+		 	 		<h2> Experiment 1 </h2>
+
+		 	 		<h3> Search for $ Food Item Prices </h3>
+
+		 	 				 	 	<div class="text">
+		 	  	The pattern for the price text is that it starts with the dollar sign "$", followed by number(s), one decimal point, followed by more numbers. This in regular expression is: <br> <br>
+
+		 	  	<span style="color:blue">\$\d+(?:\.\d+)? </span> <br> <br>
+
+					To breakdown: <br>
+
+					<span style="color:blue">\$ </span> : find character $ <br>
+
+					<span style="color:blue">\d+</span>  : find 1 or more digits <br>
+
+					<span style="color:blue">?:</span>  : the preceding item is optional and matched at most once (decimal point is optional and it should be only used at most once) <br>
+
+					<span style="color:blue">\.+</span>  : decimal point <br>
+
+					<span style="color:blue">\d+</span>  : find 1 or more digits <br>
+
+		 	  </div>
+
+		 			<img src="week2image/exercise1.jpg">
+
+
+		 			<h2> Experiment 2 </h2>
+
+		 	 		<h3> Words that Starts and Ends with the Same Letter</h3>
+
+		 	 		 	<div class="text">
+		 	 		 		Inspired by the <a href= "#example1">Regex Golf Example 1</a>, I wanted to search for how many words in this text starts and ends with the same letter. <br><br>
+
+		 	 		 		This in regular expression would be, capture the first letter as a group, follwed by any letter(s), and end with the first captured group. <br><br>
+
+		 	 		 			<span style="color:blue">(.)[a-zA-Z]*\1$</span> <br> <br>
+
+		 	 		 		</div>
+
+		 	 		 		<h3> Regex Reference</h3>
+
+		 	 		 		<div class="text">
+
+		 	 		 			To breakdown: <br>
+
+							<span style="color:blue">(.)</span> : capture any alphabet (1st capturing group) <br>
+
+							<span style="color:blue">[a-zA-Z]*</span>  : a string with letters <br>
+
+							<span style="color:blue">\1$</span>  : end with the 1st capturing group <br>
+
+		 	 		 		<img src="week2image/exercise5.jpg">
+
+		 	 		 		With this, I was able to find words like <span style="color:blue">Stores</span> and <span style="color:blue">Savings</span> but it also included searches like <span style="color:blue">tact</span> part for the word <span style="color:blue">Contact</span>. Therefore, I added <span style="color:blue">\b</span> tag to match the beginning and the end of a word. 
+
+		 	 		 		<img src="week2image/exercise4.jpg">
+
+		 	 		 		</div>
+
+
+		 	 		 		<h3> Regex Reference</h3>
+
+		 	 		 				 		<div class="text">
+
+		 	 		 		<span style="color:blue">\b</span> : matches the empty string at the beginning of a word. <br>
+		 	 		 	</div>
+
+
+		 	 		 			<h1>
+
+			| Reflection & Evaluation
+
+		</h1>
+
+
+			<div class="text">
+				For this week, I have learnt the concept of regular expressions, some basic syntax, and exercised with regex using online regex game, and using Sublime Text editor. Regex online games were really fun to play. I really enjoyed the process of finding common patterns of the text and convert them in regular expression. I want to continue my skills and try using regular expressions, JavaScript, and the p5.js library for DOM manipulation like <a href="https://editor.p5js.org/codingtrain/sketches/Jr3zCQw-9" > this</a> example made by Prof. Daniel Shiffman.
+			</div>
+
+ 	</div>
+
+
+</body>
+</html>

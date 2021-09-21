@@ -23,12 +23,12 @@ body{
 /*container 1*/
 
 #container1 {
+  z-index: 300;
   width: 100%;
   height: 65pt;
   padding-bottom: 15pt;
   background-color: white;
   position: fixed;
-  z-index: 100;
 
 }
 
@@ -46,23 +46,28 @@ body{
   top: 40px; 
   right: 50px;
   width: auto; 
-  border-radius: 25px;
-  z-index: 5;
 }
 
 .navbar a {
   display: inline-block;
   color: black;
+  border: 2px solid white;
   text-align: center;
   padding: 0px 40px;
   text-decoration: none;
   font-size: 17pt;
 }
 
+
+
 .navbar a:hover {
-  color: #572D15;
+    transition: all 0.3s ease-in;
+    border:2px solid rgb(73, 0, 95);
+    background-color: white;
+    
 
 }
+
 
 /*container 2*/
 
