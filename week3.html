@@ -1,0 +1,222 @@
+<! -- 
+apis
+27 Sep 2021 
+Soojin Lee
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <title> apis </title>
+  <link rel="stylesheet" href="week1style.css">
+</head>
+
+<!-- Top Navigation-->
+
+<body>
+
+	<div id= "container1"> 
+
+		<div class="logo">
+			 <a href="index.html">
+    	<img src="image/logo.png">
+    	  </a>
+    	</div>
+
+		<div class= "navbar">
+					<a href="index.html" id="Home">Home</a>
+        	<a href="designFund.html" id="Projects">Design Fundamentals</a>
+        	<a href="prgA-Z.html" id="Quotes">Programming from A-Z</a>
+        	<a href="about.html" id="Contact">About</a>
+        </div>
+
+	</div>
+
+<!-- Project Title Container 2-->
+
+<div id= "container2"> 
+
+ 		<div class="title">
+
+		<p> Data, Libraries, and APIs</p>
+
+		</div>
+
+		<div class ="project-description">
+
+		<p> Author: Soojin Lee  &nbsp;&nbsp;&nbsp;     Date: 27, Sep, 2021 </p> 
+
+		</div>  
+
+
+		<h1>
+		| What is API (Application Programming Interface)?
+		</h1>
+
+		<div class="text">
+
+			API is a software intermediary that allows two applications to talk to each other. Unlike user interface, which connects a computer to person, an API connects computers or pieces of software to each other. One purpose of APIs is to hide the internal details of how a system works, exposing only those parts a programmer will find useful and keeping them consistent even if the internal details later change. 
+
+			For this week, I tried to understand 
+
+		</div>
+
+		<h1>
+
+			| Understanding JSON
+
+		</h1>
+
+		<div class="text">
+
+			JSON (JavaScript Object Notation) is an open standard file format and data interchange format that uses human-readable text to store and transmit data <span style="color:blue">objects </span> consisting of attribute-value pairs and <span style="color:blue"> arrays </span>. 
+
+			<br>
+			<br>
+		</div>
+
+			<h3>JSON  Object</h3>
+
+			<div class="text">
+
+			<ul class="a">
+  			<li>	Collection of variables with a name and a value. </li>
+
+  			<li>  A JSON object is identical to JavaScrpit object (without functions). </li>
+
+
+			</ul>
+
+		</div>
+
+		 	<img src="week3image/jsonjavascript.jpg">
+
+
+		
+
+			<h3>JSON  Array</h3>
+
+			<div class="text">
+
+
+			<ul class="a">
+  			<li>  Multiple JSON objects can appear in the data as an array.</li>
+
+  			<li>  The JSON array is surrounded by square brackets [  ].</li>
+
+  			<li>  It's syntax is identical to JavaScript Syntax.</li>
+
+			</ul>
+
+			</div>
+
+
+			<h3>Loading JSON in JavaScript | p5.js</h3>
+
+				<div class="text">
+
+					Following the video tutorial <a href=https://www.youtube.com/watch?list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r&v=6mT3r8Qn1VY> Loading JSON data from a URL </a> by Daniel Shiffman, I have practiced using the JSON data in JavaScript and p5.js. 
+
+					<br> <br>
+
+					For this exercise, I used JSON file from <a href=http://open-notify.org/Open-Notify-API/People-In-Space/> Open Notify </a> about "The Number of People Currently In Space."  <br>
+
+					While some JSON files require access permit, this open source data was accessible directly through URL (as shown below). 
+
+					</div>
+
+
+					 	<img src="week3image/json1.jpg">
+
+				<div class="text">
+
+				However, I ran into an issue: <br>
+				Although it was an open source API with jsonp tag, the file continuously gave an error message that says: "request to open this data file failed". when I tried to access this JSON data in p5.js editor. <br>
+				</div>
+
+						
+						 	<img src="week3image/json3.jpg">
+
+
+
+				<div class="text">
+				Because of this error, I was able to practice how to load and use JSON data in p5.js, I couldn't actually have it open and running it on p5.js.
+
+				<br><br>
+
+				I asked for help on Discord, and professor Danial Shiffman replied that p5.js editor doesn't support https. Therefore, for this week, I decided to explore more with using preload JSON file in p5.js editor.
+				</div>
+
+
+					<img src="week3image/answer.jpg">
+
+
+							<h3>Preloading JSON file</h3>
+
+
+							<div class="text">
+
+								To practice preload() function, I used the JSON file from <a href=https://github.com/dariusk/corpora> corpora</a>. The data I chose to work on is a list of classic bvreads and pastries breads and pastries - <a href=https://github.com/dariusk/corpora/blob/master/data/foods/breads_and_pastries.json> here.</a> 
+
+							</div>
+
+									<img src="week3image/json5.jpg">
+
+								<div class="text">
+									Below is how I displayed the list of five breads and five pastries from the file. I ave styled information so that the breads are written in heading 'h2' style and the pastries are written as a text style. 
+								</div>
+
+										<img src="week3image/json4.jpg">
+
+	<h1>
+
+			| Reflection After Reading Excavating AI 
+
+		</h1>
+
+			<div class="text">
+
+				For this week, I read <a href=https://excavating.ai> Excavating AI </a>, a research paper about the complex politics within AI systems, written by Kate Crawford and Trevor Paglen. Reading this article, I began to think more critical about the images I interact with; the process of how images are being labelled, how meanings are given to these images, and who facilitates or is responsible for this process?
+				<br><br>
+
+
+				AI and datasets are commonly associated with being scientific and objective, but they aren't simply raw materials to feed algorithms - they are highly political, cultural, and subjective that and are open to interpretation and reinterpretation. 
+				<br><br>
+
+				We interact with images and datas in daily basis but we don't really question about where they come from, or how they get to us. 
+				<br>
+
+				<br> Although often overlooked, data discimination is a real social problem. These automated interpretation of images aren't purely technical, but rather inherently social and political. Labellization and classification of images promote, discriminate, approve, or reject discriminative ideas. As these AI and automation of information create new biases and boundaries, making assumptions and error,s generating new prejudices and ideologies, it is important for each individuals to interact with these information critically. 
+
+				<br><br>
+				Noticing the criticality of this issue and interested in knowing more about it, I have done some more research on this topic. 
+				<br><br>
+
+
+				The two authors of Excavating AI also held an exhibition "Training Humans" at Fondazione Osservatorio in Milan. In this photography exhibition, by displaying the collections of photos and images used by scientists to train Artificial Intelligence systems, they reveal how these 'engines of seeing' operate and ask for an often unasked yet urgent question: how does the training of an artificial intelligence reflect the bises of those who create it?
+
+				<br><br>
+
+				Below is an image from the exhibition. 
+
+				</div>
+
+				<img src="week3image/peopleface.jpg">
+
+
+
+				<div class="text">
+					Another resource to learn more about how search engines reinforce racism and the algorithm induced oppression is a book <a href=https://ebookcentral.proquest.com/lib/nyulibrary-ebooks/detail.action?docID=4834260/> Algorithms of Oppression : How Search Engines Reinforce Racism</a> by Safiya Umojia. 
+					</div>
+
+
+
+			
+
+ 	</div>
+
+
+</body>
+</html>
