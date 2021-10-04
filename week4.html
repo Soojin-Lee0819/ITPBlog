@@ -1,0 +1,233 @@
+<! -- 
+apis
+3 Oct<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <title> word counting </title>
+  <link rel="stylesheet" href="week1style.css">
+</head>
+
+<!-- Top Navigation-->
+
+<body>
+
+	<div id= "container1"> 
+
+		<div class="logo">
+			 <a href="index.html">
+    	<img src="image/logo.png">
+    	  </a>
+    	</div>
+
+		<div class= "navbar">
+					<a href="index.html" id="Home">Home</a>
+        	<a href="designFund.html" id="Projects">Design Fundamentals</a>
+        	<a href="prgA-Z.html" id="Quotes">Programming from A-Z</a>
+        	<a href="about.html" id="Contact">About</a>
+        </div>
+
+	</div>
+
+<!-- Project Title Container 2-->
+
+<div id= "container2"> 
+
+ 		<div class="title">
+
+		<p> Word Counting</p>
+
+		</div>
+
+		<div class ="project-description">
+
+		<p> Author: Soojin Lee  &nbsp;&nbsp;&nbsp;     Date: 3, Oct, 2021 </p> 
+
+		</div>  
+
+
+		<h1>
+		| Practice Counting Words 
+		</h1>
+
+		<div class="text">
+
+			For this week, I watched many video tutorials like  <a href=https://www.youtube.com/watch?v=unm0BLor8aE&list=RDCMUCvjgXvBlbQiydffZU7m1_aw&index=1/> "Word Counter in JavaScript" </a >,<a href=https://www.youtube.com/watch?v=RPMYV-eb6lI&list=PLRqwX-V7Uu6bZQkJcGM5S9fn9R9Yyd8iZ&index=5/> "TF-IDF" </a >, <a href=https://www.youtube.com/watch?v=_5jdE6RKxVk&list=PLRqwX-V7Uu6bZQkJcGM5S9fn9R9Yyd8iZ/> "Associative Arrays in JavaScript" </a >, and followed along the tutorials with some creative adaptation. For the first exercise, following "Word Counter in JavaScript" tutorial, I counted the words for the lyrics of one of my favorite song "Mean it" by Lauv . Working on this exercise, I have learnt the core algorithms of word counting. 
+
+			<br><br> View the project <a href=https://editor.p5js.org/Soojin_lee/sketches/mAKNxN4Gg/> Here </a >
+
+		</div>
+
+		<h3>
+
+			Mean It Lyrics 
+
+		</h3>
+		<div class="text">
+
+			<img src="week4image/meanittxt.jpg">
+
+		</div>
+
+		<h3>
+
+		txt.join & allwords.split
+
+		</h3>
+
+		<img src="week4image/apostrophe.jpg">
+
+		<div class="text">
+
+			I began with loading the txt file. I have learnt that when txt files are loaded using "loadStrings" function, everything is loaded as an array, where each element of the array is one line from the text file. <br> Therefore, I created a variable that joins all the array together into one long string, which then I splited them into words. 
+
+			<ol class="a">
+  			<li>  <span style="color:blue">txt.join("\n"); </span> Join all the array of text line  </li>
+
+  			<li>  <span style="color:blue">allwords.split (/\W+/); </span> make a split when for everything that is not a word character </li>
+
+			</ol>
+		</div>
+
+		<h3>
+
+		Apostrophe Issue
+
+		</h3>
+
+		<img src="week4image/apostrophe.jpg">
+
+
+		<div class="text">
+
+			One issue for using <span style="color:blue">allwords.split (/\W+/); </span> was that it splits apostrophe to two words. For example, it counted don't as two words: (don) and (t). Hence, "t" placed as the second highest word count.
+			<br><br> To fix this, instead of making it to split for every non word character, I made it to split for every <span style="color:blue">allwords.split(" " || ",");</span> space or a comma. 
+		</div>
+
+		<img src="week4image/newlinecomment.jpg">
+
+		<div class="text">
+
+			This fixed the issue of apostrophe split issue, where it is no longer splitting the word with apostrophe, but for some reason, words like "round don't" or "me down" were recognized as one word. The pattern for these words that are not splitting were words that are joined from one line to another. Therefore, I explored the join new line function to fix this issue. 
+
+		</div>
+
+
+		<h3>
+
+			Join New Line / Join Space
+
+		</h3>
+
+		<img src="week4image/newlinecomment.jpg">
+
+		<div class="text">
+			Instead of joining every new line using <span style="color:blue">text.join("\n")</span> function, I joined the array of lines, by joining space, using <span style="color:blue">text.join(" ")</span> this function. 
+		</div>
+		<img src="week4image/fixednewline.jpg">
+
+		<h3>
+
+			Deleting Punctuation 
+
+		</h3>
+
+		<img src="week4image/punctuation.jpg">
+		
+		<div class="text">
+			Since I let it to split at comma and a space, the list of words included rest of the punctuations like quoatation mark, or a bracket. Therefore, I wrote another function that deletes punctuation (as shown below). <br> <br>
+
+			For example, 
+			I used <span style="color:blue">tokens[i] = tokens[i].replace('(',' ');</span> replace function to get rid of bracket in the word. 
+		</div>
+
+		<img src="week4image/punctuationFixed.jpg">
+
+		<h3>
+
+			Elaborating on Split Function 
+
+		</h3>
+
+		<img src="week4image/apostrophe4.jpg">
+
+		<div class="text">
+
+			Following Profess Daniel Shiffman's suggestion, I fixed the apostrophe issue by writing a code this way: 
+			<br><span style="color:blue">   let tokens = allwords.split(/[^a-z0-9']+/ig);</span> 
+
+			<br><br>
+
+			This function allows tokens to split at anything that is not (a-z, 0-9, or apostrophe) and this is case insensitive. 
+
+			<br><br>
+
+			Using this code, I was able to make make the code a lot more efficient. I could get rid of all the tokens replace functions. 
+		</div>
+		<h3>
+
+			Other Learnings and Findings 
+
+		</h3>
+
+			<div class="text">
+
+				Here are some of the other things that I have learnt working on this small exercise:
+
+			<ul class="a">
+  			<li>  <span style="color:blue"> !/\d+/.test(word) </span> To test if it is not simply a string of digit(s). </li>
+
+  			<li>  <span style="color:blue">toLowerCase(); </span> To convert all the tokens to lowercase. </li>
+
+  			<li>  <span style="color:blue"> counts[words]; </span> count() function is used to count the number of collections in the element; in this case, it is counting how many (word) is in the array.  </li>
+
+  			<li>  <span style="color:blue">let keys = []; <br> keys.push(word); </span> store all the words found to the array </li>
+
+  			<li>  <span style="color:blue"> for (let i = 0; i < keys.length; i++) { <br>
+    let key = keys[i]; <br>
+    createDiv(key + " " + counts[key]); </span> display words and the word counts </li>
+
+    		<li>  <span style="color:blue"> keys.sort(); </span> sort words in alphabetical order </li>
+
+    		<li>  <span style="color:blue"> keys.sort(compare); <br>
+
+  function compare(a, b) { <br>
+    var countA = counts[a]; <br>
+    var countB = counts[b]; <br>
+    return countB - countA; <br>
+  } </span> sort words in the order of highest counts to the lowest counts. </li>
+
+			</ul>
+
+			</div>
+
+
+		<h1>
+
+			| Practicing TF-IDF
+
+		</h1>
+
+			<div class="text">
+
+				Next, I followed the <a href=https://www.youtube.com/watch?v=RPMYV-eb6lI&list=PLRqwX-V7Uu6bZQkJcGM5S9fn9R9Yyd8iZ&index=5/> TF-IDF </a > video tutorial on implementing Term Frequency - inverse Document Frequency, a algorithm that scores each word's relevance for a given document based on its frequency in one document relative to all other in a corpus. 
+
+				<br><br> 
+
+				For the text file, I used the lyrics of three songs; "Mean It", "Canada", and "Fake" by Lauv. <br><br>
+
+				View the project <a href=	https://editor.p5js.org/Soojin_lee/sketches/Nd-eGwwGw/> Here </a >
+			
+
+			</div>
+
+
+			
+
+ 	</div>
+
+
+</body>
+</html>
+
