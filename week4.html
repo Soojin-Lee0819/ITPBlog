@@ -42,7 +42,7 @@ apis
 
 		<div class ="project-description">
 
-		<p> Author: Soojin Lee  &nbsp;&nbsp;&nbsp;     Date: 3, Oct, 2021 </p> 
+		<p> Author: Soojin Lee  &nbsp;&nbsp;&nbsp;     Date: 5, Oct, 2021 </p> 
 
 		</div>  
 
@@ -123,7 +123,7 @@ apis
 		<img src="week4image/newlinecomment.jpg">
 
 		<div class="text">
-			Instead of joining every new line using <span style="color:blue">text.join("\n")</span> function, I joined the array of lines, by joining space, using <span style="color:blue">text.join(" ")</span> this function. 
+			Instead of joining every new line using <span style="color:blue">text.join("\n")</span> function, I joined the array of lines, by joining space, using <span style="color:blue">text.join(" ")</span>. 
 		</div>
 		<img src="week4image/fixednewline.jpg">
 
@@ -154,16 +154,16 @@ apis
 
 		<div class="text">
 
-			Following Profess Daniel Shiffman's suggestion, I fixed the apostrophe issue by writing a code this way: 
-			<br><span style="color:blue">   let tokens = allwords.split(/[^a-z0-9']+/ig);</span> 
+			Following Professor Daniel Shiffman's suggestion, I fixed the apostrophe issue by replacing <span style="color:blue">   allwords.split (/\W+/); </span>  <br>to 
+			<br><span style="color:blue"> allwords.split(/[^a-z0-9']+/ig);</span> 
 
 			<br><br>
 
-			This function allows tokens to split at anything that is not (a-z, 0-9, or apostrophe) and this is case insensitive. 
+			This function allows tokens to split at anything that is not (a-z, 0-9, or apostrophe). It is also case insensitive. 
 
 			<br><br>
 
-			Using this code, I was able to make make the code a lot more efficient. I could get rid of all the tokens replace functions. 
+			Using this code, I was able to make the code a lot more efficient. I could get rid of all the tokens replace functions. 
 		</div>
 		<h3>
 
@@ -215,7 +215,7 @@ apis
 
 				<br><br> 
 
-				For the text file, I used the lyrics of three songs; "Mean It", "Canada", and "Fake" by Lauv. <br><br>
+				For the exercise, I used the lyrics of three songs; "Mean It", "Canada", and "Fake" by Lauv as text files. <br><br>
 
 				View the project <a href=	https://editor.p5js.org/Soojin_lee/sketches/Nd-eGwwGw/> Here </a >
 			
@@ -223,8 +223,75 @@ apis
 			</div>
 
 
-			
+		<h3>
+			Mean It
+		</h3>
+				<img src="week4image/meanit.jpg">
+		<h3>
+			Canada
+		</h3>
+				<img src="week4image/canada.jpg">
 
+		<h3>
+			Fake 
+		</h3>
+				<img src="week4image/fake.jpg">
+
+
+
+		<h1>
+
+			| WEEK 4 Project: 
+
+		</h1>
+
+		<h2>
+			English Song Data Visualization In Korean
+		</h2>
+
+		<br>
+
+		
+		<div class="text">
+			For week 4 assignment, I designed data visualization that uses a language other than English. <br>View the project <a href=https://editor.p5js.org/Soojin_lee/sketches/RB79ehzjt /> Here </a >
+			<br><br>
+
+			For this project, elaborating on the word counting exercise, I made a short animation that visualizes the frequency of the words that appear in the song "MEAN IT" by Lauv in Korean. <br><br>
+
+			It visualizes words in MEAN IT that appear at least three times in the lyrics. <br><br>
+
+			<h3> (In nutshell, this is how the project is made) </h3>
+
+				<ol class="a">
+  			<li> It counts the number of words used in the text file "Mean It", and the frequency of each word </li>
+  			<li> Organize words in the order of highest count to lowest count </li>
+  			<li> Visualize the words that are used more than three times </li>
+
+  		</ol>
+
+  			<img src="week4image/video.gif">
+
+			In this data visualization, the size of the text matches with the number of word counts. The bigger the font size, the more frequent word appears in the text. The text color and the background rectangle color also changes according to the word count. It is organized in the order of highest word count to the lowest word count with its minimum word count of 3. Therefore, the word "me", which has the highest wordcount (43) appears on the top. However, the word "me" is written in Hanguel Alphabet. 
+			<img src="week4image/korean.jpg">
+
+			As I was working on this project, I wanted to add a fun twist by visualizing English words in Korean. Focusing on the sound of each alphabet, I added a function where English alpahbets are replaced with Korean alphabets that gives the similar sound. Since not every English letter can be directly replaced by Korean alphabet, and given that Korean is written in block system, where it is not always written linearly but in blocks, the result wasn't perfect. However, it generated an interesting visualization, and although grammatically imperfect, when assembled together, the korean words are read outloud as how it would be read out in English. <br><br>
+
+
+		</div>
+
+				
+				  <img src="week4image/video2.gif">
+
+
+		<h2>
+			What's NEXT?
+		</h2>
+	<div class="text">
+
+		As shown above, each word is visualized twice. Each row contains two words. This is because initially, I wanted to have English word and Korean word side-by-side. However, I couldn't figure out how to apply replace() function to one type of data and not to another. So I had to end the project here. I am still satisfied with the result because I find the data visualization of english text in korean alphabet is really interesting. In future, I want to develop my skills and show the English list of words and Korean list of words side-by-side. 
+
+
+	</div>
  	</div>
 
 
