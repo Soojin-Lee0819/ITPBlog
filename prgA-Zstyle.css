@@ -25,25 +25,26 @@ body{
 #container1 {
   z-index: 300;
   width: 100%;
-  height: 65pt;
+  height: 45pt;
   padding-bottom: 15pt;
   background-color: white;
   position: fixed;
+  border-bottom: 1px solid grey;
 
 }
 
 #container1 img {
-  position: relative;
+  position: fixed;
   max-width: 100%;
   width: 120pt;
-  left: 5%;
-  top: 30px;
+  padding-left: 10%;
+  top: 24px;
 }
 
 .navbar {
   overflow: hidden;
   position: fixed;
-  top: 40px; 
+  top: 34px; 
   right: 50px;
   width: auto; 
 }
@@ -69,28 +70,34 @@ body{
 }
 
 
+
 /*container 2*/
 
 #container2 {
   width: 100%;
+  padding-top: 65pt;
   height: 120pt;
-  margin-top: 80pt;
   padding-bottom: 15pt;
   font-family: 'Amatic SC', cursive;
   background-color: white;
-  text-align: center;
-  position: fixed;
+  position:relative;
   z-index: 100;
 }
 
 
 #container2 .title {
+
   font-size: 30pt;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #container2 .title_info{
-  margin-top: -10pt;
   font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   font-size: 20pt;
 }
 
@@ -99,10 +106,11 @@ body{
 #container3 {
   width: 100%;
   height: 1000pt;
-  padding-top: 220pt;
+  padding-top: 10pt;
   text-align: center;
   display: flex;
   position: relative;
+  background-color: white;
   font-family: 'Inconsolata', monospace;
 }
 
