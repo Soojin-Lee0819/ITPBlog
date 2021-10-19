@@ -1,0 +1,402 @@
+<! -- 
+Making Bots
+15 Oct<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <title> Making Bots! </title>
+  <link rel="stylesheet" href="week1style.css">
+</head>
+
+<!-- Top Navigation-->
+
+<body>
+
+	<div id= "container1"> 
+
+		<div class="logo">	<img src="image/logo.png">
+			 <a href="index.html">
+    	<img src="image/logo.png">
+    	  </a>
+    	</div>
+
+		<div class= "navbar">
+					<a href="index.html" id="Home">Home</a>
+        	<a href="designFund.html" id="Projects">Design Fundamentals</a>
+        	<a href="prgA-Z.html" id="Quotes">Programming from A-Z</a>
+        	<a href="about.html" id="Contact">About</a>
+        </div>
+
+	</div>
+
+<!-- Project Title Container 2-->
+
+<div id= "container2"> 
+
+ 		<div class="title">
+
+		<p> Making Bots!</p>
+
+		</div>
+
+		<div class ="project-description">
+
+		<p> Author: Soojin Lee  &nbsp;&nbsp;&nbsp;     Date: 15, Oct, 2021 </p> 
+
+		</div>  
+
+
+		<h1>
+		| Introducing Bots!
+		</h1>
+
+		<div class="text">
+
+			'Bot' - short for robot - is a software program that performs automated, repetitive, pre-defined tasks. The interaction can be one-sided, two-sided, multi-sided, and it's optional whether there are humans involved at all. Bots can be as simple as setting an alarm, but there are more complex bots like Siri and Cortana that cand hold conversation with people. 
+
+		</div>
+
+		<h1>
+
+		| Node.js
+
+		</h1>
+
+		<h3>
+
+		What is Node? 
+
+		</h3>
+
+		<div class="text">
+
+			Node.js is a back-end JavaScript runtime environment that executes JavaScript code outside a web browser. The developers write command line tools for server-side scripting.  
+
+		</div>
+
+		<h3>
+
+		What can Node.js do? 
+
+		</h3>
+
+		<div class="text">
+
+			According to <a href=https://www.w3schools.com/nodejs/nodejs_intro.asp/> W3 Schools </a >
+
+			<ul class="a">
+  			<li> Node.js can generate dynamic page content  </li>
+
+  			<li>  Node.js can create, open, read, write, delete, and close files on the server </li>
+
+  			<li>  Node.js can collect form data </li>
+
+  			<li>  Node.js can add, delete, modify data in your database </li>
+
+			</ul>
+		</div>
+
+		<h3>
+
+		 npm: Node Package Manager
+
+		</h3>
+
+			<div class="text">
+
+				NPM - is the default pacakage manager for JavaScript's runtime Node.js. <br> <span style="color:green">package.json </span>  file will be generated when <span style="color:green">npm init </span> is run to initialize a JavaScript/Node.js project. 
+			</div>
+
+		<h1>
+
+		  |	Commands for Computer
+
+		</h1>
+
+		<div class="text">
+
+			<ul class="a">
+  			<li> <span style="color:blue">pwd </span> - print working directory (shows which directory you are working in right now) </li>
+
+  			<li> <span style="color:blue">cd </span> - change directory. <br> Tip: You can also drag file into the terminal itself, instead of typing. </li>
+
+  			<li> <span style="color:blue"> Ctl+c Ctl+c </span> - get out of the directory </li>
+
+  			<li> <span style="color:blue">ls </span> - list the files in the directory </li>
+
+  			<li> <span style="color:blue">npm init </span> - set up a new or existing npm package. It create a package.json file.  </li>
+
+  			<li> <span style="color:blue">cd .. </span> - move one directory up </li>
+
+  			<li> <span style="color:blue">Cmd + k </span> - clearning the screen </li>
+
+  				<li> <span style="color:blue">^ c </span> - to get out of the directory </li>
+
+
+			</ul>
+		</div>
+
+
+		<h1>
+
+		  |	Steps to Create Discord Bot
+
+		</h1>
+
+		<div class="text">
+				<ol class="a">
+
+			<li> Create node project and install discord.js module as well as dotenv.
+			</li>
+					
+  			<ul class="a" style="background-color:#dcdcdc;">
+  				<li> $ npm init </li>
+  					<li> $ npm install discord.js </li>
+  				<li>$ npm install dotenv </li>
+  			</ul>
+  			<br><br>
+
+  			<li> Create a <a href=https://discord.com/developers/applications/897955711206690918/information/> Discord Developer Application </a> 
+			</li>
+				 => Set name, description, and avatar of your preference. 
+
+				</ol>
+
+			</div>
+	
+			   	<img src="weekbotimage/application.jpg">
+			  
+				<div class="text"> 
+
+			 	 <ol class="a" start="3">
+			 	 		 	<li> Select Bot from left navigation and "Add Bot" - set name and icon.
+			</li>
+
+			 	  </ol>
+  	</div>
+  		 	<img src="weekbotimage/bot.jpg">
+
+  		 	<div class="text"> 
+			 <ol class="a" start="4">
+
+				<li> Add bot to the discord server. I connected to A-Z server with the url: <br> <a href=https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot/> https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot </a> </li>
+			</li>
+
+			 => To find a client ID, go to OAuth2 from left naviation. Once you have copied your client id,  <Br> Replace the word <span style="color:green"> CLIENT_ID</span> to your client ID you copied.
+
+			 	<div class="text"> <br></div>
+
+			 	 	<li> Enable "Developer Mode" on your discord client, right-click the server icon, and "copy ID" for the server ID. 
+			</li> 
+
+			 	<li> Create a .env file with your CLIENTID, SERVERID, and BOTTOKEN:
+			</li> 
+		</ol>
+				<div class="text"> For this particular project, I used tenor API. <br>So I added TENORKEY to the .env file.
+
+			<ul class="a" style="background-color:#dcdcdc;">
+  				<li> CLIENTID=1234 </li>
+  					<li> SERVERID=1234 </li>
+  				<li>TOKEN=1234 </li>
+  				<li>TENORKEY=1234 </li>
+
+  			</ul>
+
+  			</div>
+
+ 	 <ol class="a" start="7">
+
+ 	 				<div class="text"> <br></div>
+
+				<li> get Tenor API key 
+		
+				<a href=https://tenor.com/developer/keyregistration/> 	here </a >	</li> 
+
+  				 	
+  				 	<li> Install additional node packages.
+			</li> 
+
+			<ul class="a" style="background-color:#dcdcdc;">
+			$ npm install @discordjs/builders @discordjs/rest discord-api-types
+			</ul>
+	<div class="text"> <br></div>
+
+				 	<li> Add slash commands permission. Go to your applicaiton page in the Discord developer portal, select "OAuth", check "application.commands", and open the URL that populates at the bottom.
+			</li> 
+
+	 	<li> Create and Require deploy-commands.js  
+			</li> 
+
+				<ul class="a" style="background-color:#dcdcdc;">
+			$ node deploy-commands.js
+			</ul>
+
+
+				<ul class="a" style="background-color:#dcdcdc;">
+		  require('./deploy-commands');
+			</ul>
+
+
+			 </ol>
+
+
+	</div>
+
+		<h1>
+
+			|	Project: Fun Korean Language Test With Discord Bot!
+
+		</h1>
+
+					<div class="text"> The project is uploaded to the github page <a href=https://youtu.be/jz8KGdWmkHU /> 	here </a >
+ </div>
+
+		<h2>
+
+			Video DEMO
+
+		</h2>
+		<a href=https://youtu.be/jz8KGdWmkHU /> 	<img src="weekbotimage/youtube.jpg"> </a >
+
+		
+
+		<h2>
+
+			Step-by-step
+
+		</h2>
+
+			<div class="text"> Korean testing bot is here to help you learn and test your Korean skills.  </div>
+
+		<img src="weekbotimage/hello.jpg">
+
+
+		<div class="text"> To start, type "hello" to discord chat box. <br> It will greet you and give you instructions. Please follow the instruction.  </div>
+
+			<img src="weekbotimage/strawberrygif.jpg">
+
+
+		<div class="text"> When you type in "/level1", you will receive a gif. Write down the  name of the fruit in Korean in the chat box. </div>
+
+
+			<img src="weekbotimage/ddalgi.jpg">
+
+			<div class="text"> Strawberry in Korean is "ddal-gi". If you get it correct, it will send you a message to move on to level 2. </div>
+
+
+				<img src="weekbotimage/level2.jpg">
+
+						<div class="text"> Type "/level2" as instructed. </div>
+
+					<img src="weekbotimage/receivecolor.jpg">
+
+									<div class="text"> Then it will give you an instruction: <br>
+									type "/color" to receive a color of strawberry. Continue doing this until you get the right answer. </div>
+
+					<img src="weekbotimage/colortrial.jpg">
+
+						<div class="text"> For the example above, it gave you 1. Blue 2. Blue 3. Green 4. Red in order. <br><br> When you receive the correct answer, "red", you will be get the next instruction: <br><br>
+
+							Now, type"/finish" but in Korean, to finish the game. 
+
+						</div>
+							<img src="weekbotimage/end.jpg">
+
+							<div class="text"> If you type in the correct answer, which is "zong ryo" in korean, you will be contragulated with a gif file! 
+						</div>
+
+
+		<h1>
+
+			| Learn, Understand, and Practice
+
+		</h1>
+
+
+		<div class="text"> Since this is my first client-side coding project workinng with javaScript, API, and Terminal command lines, I spent a lot of time watching video tutorials and learning what node.js is, how to set up a computer, how to write commnad lines, how to write codes using node.js, and make it run. <br> <br>
+
+		Following video tutorials from this <a href=https://shiffman.net/a2z/twitter-bots/> website </a > , I have spent the first week practicing and experimenting with making Twitter BOT that "tweets". 
+
+		<br><br>
+
+		Here are some of the successes I screen captured while practicing making Twitter Bots that tweets!
+
+		<br> (I have highlighted the bot tweets with orange rectangle box.)
+
+	</div>
+			<img src="weekbotimage/tweets.jpg">
+
+				<img src="weekbotimage/twitters2.jpg">
+
+
+
+		<h1>
+
+			| Idea & Inspiration 
+
+		</h1>
+
+
+
+	<div class="text">	
+		For WEEK6 in class, I learnt how to code a bot with discord.js. Using tenor API, and slash commands, I learnt how to make a bot where users can type slash command + key words to make bot send a GIF of the searched keywords. <br>
+		Elaborating on this, for my midterm project, I decide to create a discord bot that helps people learn Korean and quizes Korean skills.
+
+		<br><br> Mainly using message send function and slash command interaction, I wanted to make a step-by-step quiz solving game where the bot instructs and quesetion users what to do and challenge them to reply back wht the correct answer to the question. 
+
+
+			<br><br> Although the mechanism itself is simple, by adding creative narrative and interaction I planned to make it fun. 
+
+		</div>
+
+		<h1>
+
+			| Problems & Challenges
+
+		</h1>
+
+			<div class="text">	
+				I have met many challenges and errors along the way from forgetting to deploy command files, and confusing with discord.js v12 and v13. 
+
+					</div>
+
+		<h2>
+
+		  deploy command.js 
+
+		</h2>
+
+		<div class="text">To register and update the slash commands for the bot application, you need to create a <span style="color:green"> deploy-commands.js file </span> in your project directory. <br><br>
+			Apart from creating one, you need to run node deploy-commands.js. The instruction is documented <a href=https://discordjs.guide/creating-your-bot/creating-commands.html#command-deployment-script/> here. </a > Therefore I didn't run it, I was continuously getting error message that says interaction failed (image below). Once I ran node deploy-commands.js, the error issue was solved. </div>
+
+			<img src="weekbotimage/why.jpg">
+
+			<h2>
+
+		  Creating Client Instances & Guild Application Command
+		</h2>
+
+		<div class="text"> I forgot to create a new client instances for the message sending function. Along the process, I was confused with the code from discord.js v12 and v13 and I forgot to add <span style="color:green"> Intents.FLAGS.GUILD_MESSAGES </span> to client instances. This is to let discord know our bot wants to get messages. Because the bot was not getting messages, the message sending function was not being functioned. <br><br>
+
+		It was confusing because I had this code for reply function (shown below), but the bot was not replying. It was even more confusing because the slash-command function was working fine, but much simpler replying function was not working. </div>
+	<img src="weekbotimage/client1.jpg">
+
+
+				<div class="text">
+					This is because I didn't add a new client instance in this array. 
+
+				</div>
+		<img src="weekbotimage/client2.jpg">
+
+			<div class="text">
+					After adding a new client instance, the reply function worked perfectly fine. 
+
+				</div>
+			<img src="weekbotimage/client3.jpg">
+
+
+</body>
+</html>
+
+
