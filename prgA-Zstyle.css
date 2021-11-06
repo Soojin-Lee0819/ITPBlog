@@ -143,11 +143,10 @@ body{
   color: #A9A9A9;
   margin-top: -9pt;
   margin-left: 8%;
-  line-height: 31px;
   font-size: 13pt;
 }
 
 
 #container3 #weekdate p{
-   line-height: 5em;
+   line-height: 4.9em;
 }

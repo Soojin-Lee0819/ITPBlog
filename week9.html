@@ -1,0 +1,251 @@
+<! -- 
+Week9
+4 Nov<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <title> Week 9 Context Free Grammars </title>
+  <link rel="stylesheet" href="week1style.css">
+</head>
+
+<!-- Top Navigation-->
+
+<body>
+
+	<div id= "container1"> 
+
+		<div class="logo">	<img src="image/logo.png">
+			 <a href="index.html">
+    	<img src="image/logo.png">
+    	  </a>
+    	</div>
+
+		<div class= "navbar">
+					<a href="index.html" id="Home">Home</a>
+        	<a href="designFund.html" id="Projects">Design Fundamentals</a>
+        	<a href="prgA-Z.html" id="Quotes">Programming from A-Z</a>
+        	<a href="about.html" id="Contact">About</a>
+        </div>
+
+	</div>
+<!-- Project Title Container 2-->
+
+<div id= "container2"> 
+
+ 		<div class="title">
+
+		<p> Context Free Grammars</p>
+
+		</div>
+
+		<div class ="project-description">
+
+		<p> Author: Soojin Lee  &nbsp;&nbsp;&nbsp;     Date: 4, Nov, 2021 </p> 
+
+		</div>  
+
+
+		<h1>
+		| Context Free Grammars
+		</h1>
+
+		<div class="text">
+
+			<a href=https://en.wikipedia.org/wiki/Context-free_grammar/> Wikipedia</a > defines context-free grammar as (CFG) a formal grammar whose production rules are of the form
+			<Br>
+			<center>A --> &alpha; </center>
+			<Br> with A a single nonterminal symbol, and &alpha; a string of terminals and/or nonterminals (&alpha; can be empty). A formal grammar is "context free" if its production rules can be applied regardless of the context of a nonterminal. No matter which symbols surround it, the single nonterminal on the left hand side can always be replaced by the right hand side. This is what distinguishes it from a context-sensitive grammar.
+			<Br>
+
+			<br> For this week, I read these two websites to experiment on generating text with a Context Free Grammar. 
+
+			<br> The two websites I used to learn more about CFG are:
+			<ul class="a">
+  			<li> 	<a href=https://www.decontextualize.com/teaching/rwet/recursion-and-context-free-grammars/>  Context-Free Grammars by Allison Parrish</a > </li>
+  			<li> 	<a href=https://shiffman.net/a2z/cfg/>  Context-Free Grammars by Daniel Shiffman</a ></li>
+
+			</ul>
+
+
+		</div>
+
+
+
+
+		<h1>
+
+		| Experimenting with CFG
+
+		</h1>
+
+		
+		<h2>
+
+		What a Recipe! 
+
+		</h2>
+
+		<div class="text">
+
+			Adapting <a href=https://editor.p5js.org/Soojin_lee/sketches/OacAMRXzC/> CFG example, </a > I created a program that uses CFGs to generate recipe instruction. Here are some of the texts generated using <B> What a Recipe </b> Program. 
+
+			<br> <br>
+
+
+
+			Click <a href=https://editor.p5js.org/Soojin_lee/sketches/XnPy0r6qy/> here </a > to access the project. 
+
+			<br> <br>
+					I chose to write a recipe instruciton with CFG because recipe instruction texts have orders and rules. For example, it starts with a verb such as: mix, fry, boil, cut, chop, and etcetera, followed by a food item and so on. 
+
+			Below are the clauses and the terminals I created for this CFG system. 
+
+						<img src="week9image/result1.png">
+
+						It was simply so hilarious and fun to read all these recipe texts. Many of the the recipe it generates are non-sensical yet still possible. With past experiences, we know that it makes no sense to cook 2ml of water until crispy. However, without this knowledge, this sentence is grammatically correct. 
+
+</div>
+
+
+<h1> | Process </h1>
+
+		<div class="text">
+				
+
+		<img src="week9image/result2.png">
+
+			<Br>
+			I have started with studying recipe texts. Here are some of the recipe instruction texts I collected from the <a href=https://www.pinterest.co.uk/pin/400468591836436842//> recipe website </a > to study the patterns and rules within the recipe instructions. I then created my own formula for cooking instruction based on the investigation. 
+
+		</div>
+
+			<img src="week9image/recipetext.png" >
+
+		<h3> A Formula for Cooking Instruction </h3>
+		<div class="text">
+					<ol class="a">
+  			<li> 	Starts with a verb.</li>
+  			<li>  Verb is followed by food item or adjective + food item. </li>
+  			<li>  Can end here at #2 or add <b> for (How long).</b>  </li>
+  			<li>  Can end here at #3 or add <b> in | into | using (what utensil).  </b></li>
+  			<li>  Can end at #1, #2 or #3 or add <b> and + #2.</b>  </li>
+
+			</ol>
+
+</div>
+
+		<div class="text">
+			In extension of this formula, I have created clauses and terminals. 
+			</div>
+
+		<h3>
+
+		Clauses 
+
+		</h3>
+
+		<div class="text">
+
+# clauses <Br>
+
+
+S -> V NUFQ
+<Br><Br>
+
+NUFQ -> N U of F
+NUFQ -> N U of QF
+NUFQ -> N U of FQ  #Q indicates it it not terminal
+NUFQ -> N U of FPQ
+
+<Br><Br>
+
+FQ -> F until R
+FQ -> F until RQ
+
+<Br><Br>
+
+QF -> SC F until R
+QF -> SC F until RQ
+
+<Br><Br>
+
+RQ -> R M VQ <Br><Br>
+
+VQ -> transV NUFQ <Br><Br>
+
+FPQ -> F PP A P
+
+
+
+</div>
+
+		<h3>
+
+		Terminals
+
+		</h3>
+
+
+		<div class="text">
+
+
+
+# Start Verb <Br>
+V -> Add | Bake| Barbecue | Beat | Blend | Boil | Pour | Chop | Combine | Cook | Crush | Cut | Drain | Fry | Grate | Measure | Peel | Roast | Saute | Slice | Steam | Stir-fry | Wash | Mash <Br> <Br>
+
+# Transitional Verb <Br>
+transV -> add | bake| barbecue | beat | blend | boil | pour | chop | combine | cook | crush | cut | drain | fry | grate | measure | peel | roast | saute | slice | steam | stir-fry | wash | mash 
+<Br><Br>
+# Number <Br>
+N -> 3 | 2 | 20 | 300 | 1 | 5 | 10 
+<Br><Br>
+# Unit<Br>
+U -> g | ml | cups | teaspoons | slices 
+<Br><Br>
+# Time<Br>
+T -> minute(s) | hour(s) | second(s) | overnight 
+<Br><Br>
+# PrePosition<Br>
+PP -> into | on | in | to 
+<Br><Br>
+# More<Br>
+M -> and | then | after 
+<Br><Br>
+# a the an <Br>
+A -> the | a | an
+<Br><Br>
+# Adjective<Br>
+ADJ -> fresh | red | defrosted | spicy | delicious | ground | melted | finely grated | shredded | mini | sweet |  cold | dried | rolled | precooked | smooth 
+<Br><Br>
+# Food<Br>
+F -> beef | oinions | chocolate | flour | beans | eggs | milk | garlic | chicken broth | lemons | spinach | salt | pepper | oil | carrots | cheese | tomatoes | bacons | salmon | jalapeno | zucchini | sweet potato | mushroom | cream | banana | sugar | pork | beef | chicken breast | oats | water | sauce 
+<Br><Br>
+# Scale<Br>
+SC -> small | medium | large 
+<Br><Br>
+# Place<Br>
+P -> mixing bowl | oven | container | cup | non-stick frying pan | microwave | plate | air-fryer | chopping board | mixer
+<Br><Br>
+# Result<Br>
+R -> golden | brown | caramelized | fragrant | gone | thicken | warm | crispy | smooth
+
+</div>
+
+
+<h3>
+
+		Reflection & Evaluation 
+
+</h3>
+
+<div class="text">
+	I have enjoyed working on this project. The process of was like solving a puzzle, which I love doing.  I did not draw a tree branch diagram as I was creating a formula, but to make a more sophisticated text generator with more variations, the tree branch diagram would be really helpful to visualize possibilities and variations. <br><br> I am considering expanding on this to build the final project about a recipe generator bot that gives a recipe based on the food item that people already have at home. To briefly explain, people can type in the food items that are available at home and the bot will create a recipe for them using the inputs. I think it would be really interesting project to work on but I also see the potential of it being super useful for people daily about "what should I cook for dinner?". 
+	</div>
+
+
+</body>
+</html>
+
+
+
