@@ -22,9 +22,7 @@ body{
 
 /*container 1*/
 
-.iframe {
-  margin-left: 10%;
-}
+
 #container1 {
   z-index: 300;
   width: 100%;
