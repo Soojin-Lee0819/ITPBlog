@@ -1,6 +1,6 @@
 # Text-data-programming
 
-Click to view weekly learnings & projects: [here](https://soojin-lee0819.github.io/ITPBlog/prgA-Z.html](https://soojin-lee0819.github.io/Text-data-programming-analysis/prgA-Z.html)
+Click to view weekly learnings & projects: [here](https://soojin-lee0819.github.io/Text-data-programming-analysis/prgA-Z.html)
 
 ### Overview
 
